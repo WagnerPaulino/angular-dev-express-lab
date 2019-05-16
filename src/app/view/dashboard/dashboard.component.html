@@ -1,0 +1,22 @@
+<form (submit)="onFormSubmit($event)">
+  <dx-form [(formData)]="employee">
+    <dxi-item dataField="productName"></dxi-item>
+    <dxi-item dataField="cost"></dxi-item>
+    <dxi-item dataField="salePrice"></dxi-item>
+    <dxi-item itemType="button" horizontalAlignment="left" [buttonOptions]="buttonOptions">
+    </dxi-item>
+    <dxi-item name="show-order">
+      <dxo-label text="Show the Order"></dxo-label>
+      <div *dxTemplate>
+        <dx-check-box [(value)]="order.visible">
+        </dx-check-box>
+      </div>
+    </dxi-item>
+    <dxi-item #order name="order" [visible]="false">
+      <div *dxTemplate>
+        <dx-data-grid [dataSource]="orders">
+        </dx-data-grid>
+      </div>
+    </dxi-item>
+  </dx-form>
+</form>
