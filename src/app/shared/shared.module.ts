@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DxFormModule, DxCheckBoxModule, DxDataGridModule, DxButtonModule } from 'devextreme-angular';
+import { DxFormModule, DxCheckBoxModule, DxDataGridModule, DxButtonModule, DxSelectBoxModule, DxNumberBoxModule } from 'devextreme-angular';
 
 
 const COMPONENT = [];
@@ -8,7 +8,9 @@ const DEVEXPRESS = [
   DxFormModule,
   DxCheckBoxModule,
   DxDataGridModule,
-  DxButtonModule
+  DxButtonModule,
+  DxSelectBoxModule,
+  DxNumberBoxModule,
 
 ];
 const ANGULAR = [

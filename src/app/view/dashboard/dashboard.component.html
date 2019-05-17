@@ -3,8 +3,13 @@
     <dxi-item dataField="productName"></dxi-item>
     <dxi-item dataField="cost"></dxi-item>
     <dxi-item dataField="salePrice"></dxi-item>
+    <dxi-item dataField="labelLocation">
+      <dx-select-box [items]="labelLocation" [(value)]="employee.labelLocation"></dx-select-box>
+    </dxi-item>
     <dxi-item itemType="button" horizontalAlignment="left" [buttonOptions]="buttonOptions">
     </dxi-item>
+
+
     <dxi-item name="show-order">
       <dxo-label text="Show the Order"></dxo-label>
       <div *dxTemplate>

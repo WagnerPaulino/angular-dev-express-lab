@@ -11,8 +11,12 @@ export class DashboardComponent implements OnInit {
   employee = {
     productName: '',
     cost: '',
-    salePrice: ''
+    salePrice: '',
+    labelLocation: ''
   };
+
+  labelLocation = ['left', 'top'];
+  
   orders = [{
     productName: 'DesktopLCD 19',
     cost: 68,
@@ -28,13 +32,13 @@ export class DashboardComponent implements OnInit {
     useSubmitBehavior: true
   };
 
-
   constructor() { }
 
   ngOnInit() {
   }
 
   onFormSubmit(event) {
+    console.log(this.employee);
     notify({
       message: 'You have submitted the form',
       position: {
@@ -42,7 +46,6 @@ export class DashboardComponent implements OnInit {
         at: 'center top'
       }
     }, 'success', 3000);
-
     event.preventDefault();
   }
 
